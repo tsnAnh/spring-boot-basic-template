@@ -1,0 +1,44 @@
+[versions]
+springBoot = "3.3.2"
+springDependencyManagement = "1.1.6"
+flyway = "10.16.0"
+postgresql = "42.7.3"
+r2dbcPostgresql = "1.0.0.RELEASE"
+springJdbc = "6.1.11"
+h2 = "2.3.230"
+r2dbcH2 = "1.0.0.RELEASE"
+reactorTest = "3.6.8"
+springBatchTest = "5.1.2"
+springSecurity = "6.3.1"
+junitPlatformLauncher = "1.10.3"
+springdocOpenApi = "2.6.0"
+
+[libraries]
+spring-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web", version.ref = "springBoot" }
+spring-boot-starter-actuator = { group = "org.springframework.boot", name = "spring-boot-starter-actuator", version.ref = "springBoot" }
+spring-boot-starter-batch = { group = "org.springframework.boot", name = "spring-boot-starter-batch", version.ref = "springBoot" }
+spring-boot-starter-data-r2dbc = { group = "org.springframework.boot", name = "spring-boot-starter-data-r2dbc", version.ref = "springBoot" }
+spring-boot-security-web = { group = "org.springframework.security", name = "spring-security-web", version.ref = "springSecurity" }
+spring-boot-starter-security = { group = "org.springframework.boot", name = "spring-boot-starter-security", version.ref = "springBoot" }
+spring-boot-starter-validation = { group = "org.springframework.boot", name = "spring-boot-starter-validation", version.ref = "springBoot" }
+flyway-core = { group = "org.flywaydb", name = "flyway-core", version.ref = "flyway" }
+flyway-database-postgresql = { group = "org.flywaydb", name = "flyway-database-postgresql", version.ref = "flyway" }
+spring-jdbc = { group = "org.springframework", name = "spring-jdbc", version.ref = "springJdbc" }
+spring-boot-configuration-processor = { group = "org.springframework.boot", name = "spring-boot-configuration-processor", version.ref = "springBoot" }
+spring-boot-docker-compose = { group = "org.springframework.boot", name = "spring-boot-docker-compose", version.ref = "springBoot" }
+postgresql = { group = "org.postgresql", name = "postgresql", version.ref = "postgresql" }
+r2dbc-postgresql = { group = "org.postgresql", name = "r2dbc-postgresql", version.ref = "r2dbcPostgresql" }
+spring-boot-starter-test = { group = "org.springframework.boot", name = "spring-boot-starter-test", version.ref = "springBoot" }
+reactor-test = { group = "io.projectreactor", name = "reactor-test", version.ref = "reactorTest" }
+spring-batch-test = { group = "org.springframework.batch", name = "spring-batch-test", version.ref = "springBatchTest" }
+spring-security-test = { group = "org.springframework.security", name = "spring-security-test", version.ref = "springSecurity" }
+h2 = { group = "com.h2database", name = "h2", version.ref = "h2" }
+r2dbc-h2 = { group = "io.r2dbc", name = "r2dbc-h2", version.ref = "r2dbcH2" }
+junit-platform-launcher = { group = "org.junit.platform", name = "junit-platform-launcher", version.ref = "junitPlatformLauncher" }
+springdoc-openapi-ui = { group = "org.springdoc", name = "springdoc-openapi-starter-webmvc-ui", version.ref = "springdocOpenApi" }
+hikari-cp = { group = "com.zaxxer", name = "HikariCP", version = "5.1.0" }
+spring-boot-starter-data-jpa = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa", version.ref = "springBoot" }
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "springBoot" }
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "springDependencyManagement" }

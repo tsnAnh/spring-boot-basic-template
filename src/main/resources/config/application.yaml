@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: DemoApplication
+  profiles:
+    active: #spring.profiles.active#
+    group:
+      dev:
+        - dev
+        - api-docs
+      prod:
+        - prod
+        - api-docs
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+    properties:
+      hibernate.default_batch_fetch_size: 10
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.order_inserts: true
+      hibernate.order_updates: true
+      hibernate.jdbc.batch_size: 100
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 180000
+      register-mbeans: true
+
+#  flyway:
+#    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/demo_db}
+#    user: ${SPRING_DATASOURCE_USERNAME:postgres}
+#    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+#    enabled: true
+#    locations: filesystem:../db/migrations
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger.html
+    operations-sorter: method
+    display-request-duration: true
